@@ -6,7 +6,6 @@ func OneCount(b byte) int {
 	// Hinweis:
 	// Gehen Sie analog zur Funktion `BinaryString` vor, aber zählen Sie
 	// dabei die Einsen, statt die Binärdarstellung zu erzeugen.
-	// begin:solution
 	count := 0
 	for b != 0 {
 		lastbit := b % 2
@@ -16,5 +15,4 @@ func OneCount(b byte) int {
 		b = b / 2
 	}
 	return count
-	// end:solution
 }

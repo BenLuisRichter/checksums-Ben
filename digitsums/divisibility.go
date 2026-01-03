@@ -6,10 +6,8 @@ package digitsums
 func IsDivisibleBy3(n int) bool {
 	// Hinweis:
 	// Eine Zahl ist durch 3 teilbar, wenn ihre Quersumme durch 3 teilbar ist.
-	// begin:solution
 	for n >= 10 {
 		n = DigitSum(n)
 	}
 	return n == 0 || n == 3 || n == 6 || n == 9
-	// end:solution
 }

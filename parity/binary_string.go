@@ -10,7 +10,6 @@ func BinaryString(b byte) string {
 	// aufzubauen. Nutzen Sie eine Schleife, um die Binärziffern zu ermitteln.
 	// Sie können die letzte Ziffer bestimmen, indem Sie `b % 2` berechnen,
 	// und Sie können die letzte Ziffer entfernen, indem Sie `b` durch 2 teilen.`
-	// begin:solution
 	if b == 0 {
 		return "0"
 	}
@@ -21,5 +20,4 @@ func BinaryString(b byte) string {
 		result = fmt.Sprintf("%d", lastbit) + result
 	}
 	return result
-	// end:solution
 }

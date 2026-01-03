@@ -17,14 +17,12 @@ func EANChecksum(digits []int) int {
 	// einmal bei Index 0 (gerade Positionen) und einmal bei Index 1 (ungerade Positionen).
 	// Um die Prüfziffer zu berechnen, muss i.W. diese Summe von 10 subtrahiert werden
 	// und dabei der Modulo-Operator genutzt werden, das Ergebnis in den Bereich 0-9 zu bringen.
-	// begin:solution
 	digitsum := 0
 	for i, digit := range digits {
 		digitsum += digit * (1 + 2*(i%2)) // ungerade Positionen: *1, gerade Positionen: *3
 	}
 	checksum := (10 - (digitsum % 10)) % 10
 	return checksum
-	// end:solution
 }
 
 // / EANisValid prüft, ob eine Liste von Ziffern eine gültige EAN-13-Zahl darstellt.
@@ -36,7 +34,5 @@ func EANisValid(digits []int) bool {
 	// 1. Berechnen Sie die Prüfziffer für die ersten 12 Ziffern und vergleichen Sie
 	//    sie mit der 13. Ziffer.
 	// 2. Berechnen Sie die Prüfziffer für alle 13 Ziffern und prüfen Sie, ob das Ergebnis 0 ist.
-	// begin:solution
 	return EANChecksum(digits) == 0
-	// end:solution
 }

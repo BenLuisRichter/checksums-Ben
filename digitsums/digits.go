@@ -11,7 +11,6 @@ func Digits(n int) []int {
 	// die letzte Ziffer entfernen, indem Sie `n` durch 10 teilen.
 	// Am einfachsten ist es, erstmal die Ziffern in umgekehrter Reihenfolge zu sammeln
 	// und die Liste am Ende umzukehren (z.B. mit `slices.Reverse`).
-	// begin:solution
 	if n == 0 {
 		return []int{0}
 	}
@@ -23,5 +22,4 @@ func Digits(n int) []int {
 	}
 	slices.Reverse(result)
 	return result
-	// end:solution
 }
