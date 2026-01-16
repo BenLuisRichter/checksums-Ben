@@ -4,6 +4,6 @@ package parity
 // String mit der Binärdarstellung dieser Zahl.
 func BinaryString(b byte) string {
 	result := ""
-	// TODO
+	//TODO
 	return result
 }
